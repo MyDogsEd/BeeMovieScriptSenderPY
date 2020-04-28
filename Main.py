@@ -1,16 +1,21 @@
 import time
 
+# Have the user input the amount of seconds to wait in between words.
+file = str(input("Enter the name and extension file that you want to read from."))
+timeSleep = float(input("Enter the amount of time in seconds to wait in between words."))
 
-#import beemoviescript.txt
-script = open("beemoviescript.txt", "r")
+# import user's file
+script = open(file, "r")
 
-#make the script file into a varible
-strscript = str(script.read())
+# make the script file into a variable
+strScript = str(script.read())
 
-#split the script varible into an array (split on spaces)
-splitscript = strscript.split()
+# split the script variable into an array (split on spaces)
+splitScript = strScript.split()
 
-#print the script
-for i in range(0,9157):
-    print(splitscript[i])
-    time.sleep(0.5)
+splitScriptLength = len(splitScript)
+
+# print the script
+for i in range(0, splitScriptLength):
+    print(splitScript[i])
+    time.sleep(timeSleep)
